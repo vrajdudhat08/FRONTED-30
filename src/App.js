@@ -10,13 +10,15 @@ import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Cart from './pages/Cart';
 import Order from './pages/Order';
-
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 
 const App = () => {
   return (
     <Router>
       <div className="App">
+       
         <GlobalStyles />
         <Navbar />
         <main>

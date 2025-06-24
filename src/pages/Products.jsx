@@ -1,6 +1,6 @@
 
 
-// src/pages/Products.jsx
+
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
@@ -114,4 +114,6 @@ const Products = () => {
 };
 
 export default Products;
+
+
 
