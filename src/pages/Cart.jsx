@@ -58,7 +58,7 @@ const Cart = () => {
         total: grandTotal,
       };
 
-      await axios.post('http://localhost:5000/api/orders', newOrder);
+      await axios.post('https://vd-backend.onrender.com/api/orders', newOrder);
 
       alert("Order placed successfully!");
       localStorage.removeItem('cartItems');
