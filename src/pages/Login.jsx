@@ -37,7 +37,9 @@ const Login = () => {
 
     if (isLogin) {
       try {
-        const res = await axios.post('http://localhost:5000/api/auth/login', {
+        // const res = await axios.post('http://localhost:5000/api/auth/login', {
+                const res = await axios.post('http://10.0.18362.175:5000/api/login', {
+
           email: formData.email,
           password: formData.password
         });
@@ -55,8 +57,9 @@ const Login = () => {
       }
 
       try {
-        const res = await axios.post('http://localhost:5000/api/auth/register', {
-          firstName: formData.firstName,
+        const res = await axios.post('http://10.0.18362.175:5000/api/auth/register', {
+        // const res = await axios.post('http://localhost:5000/api/auth/register', {
+        firstName: formData.firstName,
           lastName: formData.lastName,
           email: formData.email,
           password: formData.password
