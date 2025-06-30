@@ -37,8 +37,8 @@ const Login = () => {
 
     if (isLogin) {
       try {
-        const res = await axios.post( 'https://vd-backend.onrender.com/api/auth/login', {
         // const res = await axios.post('http://localhost:5000/api/auth/login', {
+        await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/login`, {
           email: formData.email,
           password: formData.password
         });
@@ -56,8 +56,8 @@ const Login = () => {
       }
 
       try {
-        const res = await axios.post('https://vd-backend.onrender.com/api/auth/register', {
         // const res = await axios.post('http://localhost:5000/api/auth/register', {
+        await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`, {
           firstName: formData.firstName,
           lastName: formData.lastName,
           email: formData.email,
