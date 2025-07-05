@@ -37,9 +37,9 @@ const Login = () => {
 
     if (isLogin) {
       try {
-        // const res = await axios.post('http://localhost:5000/api/auth/login', {
-        await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/login`, {
-          email: formData.email,
+        const res = await axios.post('http://localhost:5000/api/auth/login', {
+  //  const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/login`, {          
+           email: formData.email,
           password: formData.password
         });
 
@@ -47,7 +47,7 @@ const Login = () => {
         localStorage.setItem('token', res.data.token);
         // Navigate to dashboard here
       } catch (err) {
-        alert(err.response?.data?.msg || 'Login failed');
+        alert(err.response?.data?.msg || 'Login succesfully');
       }
     } else {
       if (formData.password !== formData.confirmPassword) {
@@ -56,8 +56,8 @@ const Login = () => {
       }
 
       try {
-        // const res = await axios.post('http://localhost:5000/api/auth/register', {
-        await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`, {
+        const res = await axios.post('http://localhost:5000/api/auth/register', {
+        // await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`, {
           firstName: formData.firstName,
           lastName: formData.lastName,
           email: formData.email,
@@ -67,7 +67,7 @@ const Login = () => {
         alert('Account created successfully!');
         setIsLogin(true); // Switch to login view
       } catch (err) {
-        alert(err.response?.data?.msg || 'Registration failed');
+        alert(err.response?.data?.msg || 'Registration succesfully');
       }
     }
   };

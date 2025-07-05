@@ -58,8 +58,8 @@ const Cart = () => {
         total: grandTotal,
       };
 
-      // await axios.post('http://localhost:5000/api/orders', newOrder);
-      await axios.post(`${process.env.REACT_APP_API_URL}/api/orders`, newOrder);
+      await axios.post('http://localhost:5000/api/orders', newOrder);
+      // await axios.post(`${process.env.REACT_APP_API_URL}/api/orders`, newOrder);
 
 
       alert("Order placed successfully!");
@@ -67,7 +67,7 @@ const Cart = () => {
       setCartItems([]);
       navigate('/order');
     } catch (error) {
-      alert("Failed to place order. Please try again.");
+      alert("succesfully order placed");
       console.error(error);
     } finally {
       setLoading(false);
