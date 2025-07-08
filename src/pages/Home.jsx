@@ -115,7 +115,7 @@ const Home = () => {
           <div className="row align-items-center">
             <div className="col-md-6">
               <h1 ref={titleRef} className="display-2 luxury-text mb-4">
-                Timeless <span className="gold-accent">Elegance</span>
+              perfectuly<span className="gold-accent">Elegance</span>
               </h1>
               <p ref={subtitleRef} className="lead mb-4">
                 Discover our exquisite collection of handcrafted jewelry,
