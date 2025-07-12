@@ -36,7 +36,7 @@ const Login = () => {
 
     if (isLogin) {
       try {
-        const res = await axios.post('https://new-backend-1-rs39.onrender.com//api/auth/login', {
+        const res = await axios.post('https://new-backend-1-rs39.onrender.com/api/auth/login', {
           email: formData.email,
           password: formData.password
         });
@@ -54,7 +54,7 @@ const Login = () => {
       }
 
       try {
-        await axios.post('https://new-backend-1-rs39.onrender.com//api/auth/register', {
+        await axios.post('https://new-backend-1-rs39.onrender.com/api/auth/register', {
           firstName: formData.firstName,
           lastName: formData.lastName,
           email: formData.email,
