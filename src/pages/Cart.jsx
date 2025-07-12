@@ -58,7 +58,7 @@ const Cart = () => {
         total: grandTotal,
       };
 
-      await axios.post('http://localhost:5000/api/orders', newOrder);
+      await axios.post('https://new-backend-1-rs39.onrender.com/api/orders', newOrder);
       
 
 
